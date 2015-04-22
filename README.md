@@ -14,6 +14,22 @@ Factories can be classes themselves or static methods on the classes being built
 # Builder
 Is a stateful creation pattern that is useful for creating complex objects that can require a number of optional steps.
 
+```
+Builder *robotBuilder = [[Builder alloc] init];
+
+[robotBuilder withArms];
+[robotBuilder withLegs];
+
+Robot *humanShaped = [robotBuilder build];
+
+[robotBuilder withAntenna];
+Robot *alienShaped = [robotBuilder build];
+
+// Can't have wheels and legs in this domain
+[robotBuilder withWheels];
+Robot *invalidRobot = [robotBuilder build];
+```
+
 [Builder.h](https://github.com/jdunwoody/patterns/blob/master/Patterns/Classes/Patterns/Builder.h)
 
 [Builder.m](https://github.com/jdunwoody/patterns/blob/master/Patterns/Classes/Patterns/Builder.m)
