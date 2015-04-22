@@ -6,7 +6,8 @@ Is responsible for instantiating a particular object, removing that concern from
 As a creator pattern it can assist in dependency injection and making testing easier by not requiring the stubbing of an initialiser. 
 Factories can be classes themselves or static methods on the classes being built. 
 
-[See the code](https://github.com/jdunwoody/patterns/blob/master/Patterns/Classes/Patterns/Factory.h)
+[Factory.h](https://github.com/jdunwoody/patterns/blob/master/Patterns/Classes/Patterns/Factory.h)
+[Factory.m](https://github.com/jdunwoody/patterns/blob/master/Patterns/Classes/Patterns/Factory.m)
 
 # Builder
 Is a stateful creation pattern that is useful for creating complex objects that can require a number of optional steps.
