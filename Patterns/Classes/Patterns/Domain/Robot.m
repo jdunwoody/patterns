@@ -7,8 +7,18 @@
 
 
 @implementation Robot
+
 - (instancetype)initWithName:(NSString *)name
 {
-    return nil;
+    self = [super init];
+
+    if (!self) {
+        return self;
+    }
+
+    self.name = name;
+
+    return self;
 }
+
 @end

@@ -7,5 +7,14 @@
 
 
 @interface Robot : NSObject
+
+@property (nonatomic, strong) NSString *name;
+
+@property (nonatomic) int numArms;
+
+@property (nonatomic, strong) int numLegs;
+@property (nonatomic, strong) id numWheels;
+@property (nonatomic, strong) int numAntennae;
 - (instancetype)initWithName:(NSString *)name;
+
 @end
