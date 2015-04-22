@@ -7,7 +7,18 @@
 //
 
 #import "Factory.h"
+#import "Robot.h"
 
 @implementation Factory
+
+- (Robot *)create
+{
+    return [self createWithName:@"Default Robot Name"];
+}
+
+- (Robot *)createWithName:(NSString *)name
+{
+    return [[Robot alloc] initWithName:name];
+}
 
 @end

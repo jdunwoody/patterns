@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class Robot;
+
 @interface Factory : NSObject
+
+- (Robot *)create;
+- (Robot *)createWithName:(NSString *)name;
 
 @end
