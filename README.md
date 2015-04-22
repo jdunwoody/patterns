@@ -38,15 +38,16 @@ Robot *invalidRobot = [robotBuilder build];
 
 # Delegation
 Is a procedural pattern where the object delegates the implmentation of a method to another object.
+Differs from Composition in that the delegate is let likely to be owned by the delegator.
 
-```
-Delegator *houseworkDelegator = [[Delegator alloc] initWithHuman:[[Human alloc]init] robot:[[Robot alloc]init];
+```objc
+Delegator *human = [[Delegator alloc] initWithRobot:[[Robot alloc]init];
 
-// The human is delegated the task of cooking the dinner
-[houseWorkDelegator cookDinner];
+// The human is does the task of cooking the dinner
+[human cookDinner];
 
 // The robot is delegated the task of vacuuming the house
-[houseWorkDelegator vacuumHouse];
+[human vacuumHouse];
 ```
 
 [Delegator.h](https://github.com/jdunwoody/patterns/blob/master/Patterns/Classes/Patterns/Delegator.h)
@@ -55,20 +56,28 @@ Delegator *houseworkDelegator = [[Delegator alloc] initWithHuman:[[Human alloc]i
 
 # Composition
 Is an abstraction pattern that allow a class to provide functionality from more than one source class.
+Different from a Delegator in that it generally owns the objects that it is composed of.
+Composition can be used when refactoring a large or multi responsibility class.
+
+```objc
+
+```
 
 [Composition.h](https://github.com/jdunwoody/patterns/blob/master/Patterns/Classes/Patterns/Composition.h)
 
 [Composition.m](https://github.com/jdunwoody/patterns/blob/master/Patterns/Classes/Patterns/Composition.m)
 
+## Structural Patterns
+
 # Proxy
-A wrapper object that is used in place of another object, offers additional functionality on top of what is provided by the object being proxied.
+A wrapper object that is used in place of another object. Implements the same interface.
 
 [Proxy.h](https://github.com/jdunwoody/patterns/blob/master/Patterns/Classes/Patterns/Proxy.h)
 
 [Proxy.m](https://github.com/jdunwoody/patterns/blob/master/Patterns/Classes/Patterns/Proxy.m)
 
 # Decorator
-A wrapper class that provides delegates through to its wrapped object while providing additional functionality.
+A wrapper class that implements the interface of the wrapped object as well as some providing additional functionality.
 
 [Decorator.h](https://github.com/jdunwoody/patterns/blob/master/Patterns/Classes/Patterns/Decorator.h)
 
