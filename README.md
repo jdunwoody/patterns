@@ -39,9 +39,19 @@ Robot *invalidRobot = [robotBuilder build];
 # Delegation
 Is a procedural pattern where the object delegates the implmentation of a method to another object.
 
-[Delegate.h](https://github.com/jdunwoody/patterns/blob/master/Patterns/Classes/Patterns/Delegate.h)
+```
+Delegator *houseworkDelegator = [[Delegator alloc] initWithHuman:[[Human alloc]init] robot:[[Robot alloc]init];
 
-[Delegate.m](https://github.com/jdunwoody/patterns/blob/master/Patterns/Classes/Patterns/Delegate.m)
+// The human is delegated the task of cooking the dinner
+[houseWorkDelegator cookDinner];
+
+// The robot is delegated the task of vacuuming the house
+[houseWorkDelegator vacuumHouse];
+```
+
+[Delegator.h](https://github.com/jdunwoody/patterns/blob/master/Patterns/Classes/Patterns/Delegator.h)
+
+[Delegator.m](https://github.com/jdunwoody/patterns/blob/master/Patterns/Classes/Patterns/Delegator.m)
 
 # Composition
 Is an abstraction pattern that allow a class to provide functionality from more than one source class.
